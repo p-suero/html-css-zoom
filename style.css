@@ -24,7 +24,6 @@ footer {
     height: 50px;
     display: flex;
     justify-content: space-between;
-    background: rgb(64,64,64);
     background: linear-gradient(180deg, rgba(64,64,64,1) 0%, rgba(28,28,28,1) 66%);
 }
 
@@ -39,6 +38,7 @@ button  {
     margin-right: 15px;
     margin-top: 5px;
     cursor: pointer;
+    border: 1px solid black;
 }
 
 button:hover  {
@@ -88,13 +88,18 @@ main img {
     border: 2px solid chartreuse;
 }
 
+.person:nth-child(7) i {
+    color: red;
+}
+
 /** selettori footer **/
 #footer-left {
     width: 200px;
     height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
+    padding-left: 20px;
 }
 
 #footer-center {
@@ -106,11 +111,12 @@ main img {
 }
 
 #footer-right {
-    width: 100px;
+    width: 200px;
     height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
+    padding-right: 20px;
 }
 
 .action-container {
@@ -120,7 +126,12 @@ main img {
     text-align: center;
 }
 
-.action-container a{
+#footer-left .action-container:nth-of-type(even) {
+    margin-right: 20px;
+    padding-left: 8px;
+}
+
+.action-container a {
     display: block;
     color: inherit;
     text-decoration: none;
